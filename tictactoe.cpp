@@ -22,13 +22,13 @@ int main(){
 	for(int i=0; i<9; i++){
 		system("cls");
 		printBoard();
-		if(turn) cout<<"Player 1 Turn (Symbol: O)"<<endl;
-		else cout<<"Player 2 Turn (Symbol: X)"<<endl;
+		if(turn) cout<<"Player 1 Turn (Symbol: O) : "<<endl;
+		else cout<<"Player 2 Turn (Symbol: X) : "<<endl;
 		printInputMatrix();
-		cout<<"Enter Input from Input Matrix: ";
+		cout<<"Enter Input from Input Matrix : ";
 		cin>>input;
 		while(input<0 || input>9){
-			cout<<"Invalid Input. Please Re-Enter input: ";
+			cout<<"Invalid Input. Please Re-Enter input : ";
 			cin>>input;
 		}
 		if(turn) mark = 'O';
@@ -43,15 +43,15 @@ int main(){
 		if( won){
 			system("cls");
 			printBoard();
-			if(turn) cout<<endl<<"!!!! Player 1 - Won !!!!";
-			else cout<<endl<<"!!!! Player 2 -  Won !!!!";
+			if(turn) cout<<endl<<"!!!!!! Player 1 - Won !!!!!!";
+			else cout<<endl<<"!!!!!! Player 2 -  Won !!!!!!";
 			getch();
 			break;
 		}
 		if(i==8){
 			system("cls");
 			printBoard();
-			cout<<endl<<"!!!!  MATCH DRAW  !!!!";
+			cout<<endl<<"!!!!!!  MATCH DRAW  !!!!!!";
 		}
 		
 		turn = !turn;
@@ -60,7 +60,7 @@ int main(){
 	return 0;
 }
 void printInputMatrix(){
-	cout<<endl<<endl<<"INPUT MATRIX"<<endl;
+	cout<<endl<<endl<<"   INPUT MATRIX   "<<endl;
 	cout<<" 1 | 2 | 3 "<<endl;
 	cout<<"------------"<<endl;
 	cout<<" 4 | 5 | 6 "<<endl;
@@ -68,11 +68,11 @@ void printInputMatrix(){
 	cout<<" 7 | 8 | 9 "<<endl;
 }
 void printBoard(){
-	cout<<" "<<board[0][0]<<" | "<<board[0][1]<<" | "<<board[0][2]<<" "<<endl;
+	cout<<"  "<<board[0][0]<<" | "<<board[0][1]<<" | "<<board[0][2]<<"  "<<endl;
 	cout<<"------------"<<endl;
-	cout<<" "<<board[1][0]<<" | "<<board[1][1]<<" | "<<board[1][2]<<" "<<endl;
+	cout<<"  "<<board[1][0]<<" | "<<board[1][1]<<" | "<<board[1][2]<<"  "<<endl;
 	cout<<"------------"<<endl;
-	cout<<" "<<board[2][0]<<" | "<<board[2][1]<<" | "<<board[2][2]<<" "<<endl;
+	cout<<"  "<<board[2][0]<<" | "<<board[2][1]<<" | "<<board[2][2]<<"  "<<endl;
 }
 int addMark(){
 	for(int i=0,k=1; i<3; i++ ){
@@ -83,7 +83,7 @@ int addMark(){
 					return 1;
 				}
 				else{
-					cout<<"Invalid Input";
+					cout<<"!!Invalid Input!!";
 					getch();
 					return 0;
 				}
